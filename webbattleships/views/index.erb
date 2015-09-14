@@ -1,3 +1,21 @@
-<div style='border: 10px dashed green'>
-<img src='http://bit.ly/1eze8aE'>
+<div style='border: 3px dashed red'>
+  <% if @visitor %>
+    Hello, <%= @visitor %>
+    You like, <%= @cheese %>
+    And your hair is <%= @hair %>
+  <% else %>
+    <form action = "/hello">
+    What is your name?
+    <input type ="text" name="name">
+
+    What is your fave cheese
+    <input type = "text" name="favecheese">
+
+
+    What colour is your hair?
+    <input type = "text" name="hair">
+    <input type = "submit">
+  </form>
+  <% end %>
+  <img src='/images/kitten.png'>
 </div>

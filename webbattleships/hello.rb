@@ -1,9 +1,11 @@
 require 'sinatra'
 
-get '/' do
-erb :index
+get '/hello' do
+@visitor = params[:name]
+@cheese = params[:favecheese]
+@hair = params[:hair]
+ erb :index
 end
 
 get '/secret' do
-  'this is a secret page again - Jong Min'
-end
+  'this is a secret message for Jong Min'
